@@ -42,6 +42,7 @@ const AUTHENTICATION_MODULES = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     ...AUTHENTICATION_MODULES,
     ...MATERIAL_MODULES,
     StoreModule.forRoot(reducers),
