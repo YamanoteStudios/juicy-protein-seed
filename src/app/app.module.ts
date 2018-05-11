@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { environment } from '../environments/environment';
 
+
 /** For Authentication Module */
 import { MatSidenavModule, MatToolbarModule, MatIconModule } from '@angular/material';
 import { StoreModule } from '@ngrx/store';
@@ -12,13 +13,15 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { RouteAuthenticationModule } from '../app/authentication/route-authentication.module';
 import { AuthenticationModule } from './authentication/authentication.module';
 import { EffectsModule } from '@ngrx/effects';
+import { reducers } from 'src/app/state';
+
 
 // import as CONST es6 style
-const NGRX_MODULES =  [
-  StoreModule,
-  StoreDevtoolsModule,
-  EffectsModule
-];
+// const NGRX_MODULES =  [
+//   StoreModule,
+//   StoreDevtoolsModule,
+//   EffectsModule
+// ];
 
 const MATERIAL_MODULES = [
   MatSidenavModule,
@@ -38,9 +41,14 @@ const AUTHENTICATION_MODULES = [
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     ...AUTHENTICATION_MODULES,
     ...MATERIAL_MODULES,
-    ...NGRX_MODULES,
+    StoreModule.forRoot(reducers),
+    StoreDevtoolsModule.instrument({
+      name: 'Flash News Network',
+      logOnly: environment.production,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
