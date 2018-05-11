@@ -5,7 +5,6 @@ import { Logout } from 'src/app/authentication/actions/authentication.actions';
 
 
 
-
 @Component({
   selector: 'newsn-root',
   template: `
@@ -17,7 +16,6 @@ import { Logout } from 'src/app/authentication/actions/authentication.actions';
       <span class="spacer"></span>
       <span *ngIf="loggedIn$ | async" (click)="onLogout()">Logout</span>
     </mat-toolbar>
-
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

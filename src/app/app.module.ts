@@ -14,10 +14,6 @@ import { RouteAuthenticationModule } from '../app/authentication/route-authentic
 import { AuthenticationModule } from './authentication/authentication.module';
 import { EffectsModule } from '@ngrx/effects';
 import { reducers } from 'src/app/state';
-import { LoginViewComponent } from './login-view/login-view.component';
-import { LoginFormComponent } from './login-form/login-form.component';
-import { UserHomeComponent } from './user-home/user-home.component';
-
 
 // import as CONST es6 style
 // const NGRX_MODULES =  [
@@ -41,9 +37,6 @@ const AUTHENTICATION_MODULES = [
 @NgModule({
   declarations: [
     AppComponent,
-    LoginViewComponent,
-    LoginFormComponent,
-    UserHomeComponent
   ],
   imports: [
     BrowserModule,
@@ -58,6 +51,8 @@ const AUTHENTICATION_MODULES = [
       name: 'Flash News Network',
       logOnly: environment.production,
     }),
+    ...AUTHENTICATION_MODULES,
+    EffectsModule.forRoot([]),
   ],
   providers: [],
   bootstrap: [AppComponent]

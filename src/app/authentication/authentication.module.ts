@@ -7,8 +7,14 @@ import {
   MatCardModule,
   MatDialogModule,
 } from '@angular/material';
+
+import {AppComponent} from '../app.component';
 import { EffectsModule } from '@ngrx/effects';
 import { RouteAuthenticationModule } from './route-authentication.module';
+import { LoginViewComponent } from './components/login-view/login-view.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
+import { UserHomeComponent } from './components/user-home/user-home.component';
+
 
 
 @NgModule({
@@ -23,9 +29,11 @@ import { RouteAuthenticationModule } from './route-authentication.module';
     
     ],
     declarations: [
- 
+      LoginViewComponent,
+      LoginFormComponent,
+      UserHomeComponent
     ],
-    entryComponents: [],
+    entryComponents: [AppComponent],
   })
   export class AuthenticationModule {}
   
