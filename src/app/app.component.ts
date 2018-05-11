@@ -7,7 +7,7 @@ import { Logout } from 'src/app/authentication/actions/authentication.actions';
 
 
 @Component({
-  selector: 'news-root',
+  selector: 'newsn-root',
   template: `
   <mat-sidenav-container fullscreen>
   <mat-sidenav></mat-sidenav>
