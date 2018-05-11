@@ -44,7 +44,9 @@ const AUTHENTICATION_MODULES = [
     BrowserAnimationsModule,
     HttpClientModule,
     ...AUTHENTICATION_MODULES,
-    ...MATERIAL_MODULES,
+     MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
     StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument({
       name: 'Flash News Network',
