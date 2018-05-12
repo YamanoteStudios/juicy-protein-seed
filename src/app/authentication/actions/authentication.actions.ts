@@ -4,8 +4,12 @@ import { UserModel } from '../models/user.model';
 
 export enum CredentialsActionTypes {
   Login = '[Login Page] Login',
-  LoginSuccess = '[Auth API] Login Success',
+  LoginSuccess = '[Authentication API] Login Success',
   Logout = '[Authentication] Confirm Logout',
+  LoginFailure = '[Authentication API] Login Failure',
+  LogoutCancelled = '[Authentication] Logout Cancelled',
+  LogoutConfirmed = '[Authentication] Logout Confirmed',
+  LogoutComplete = '[Authentication API] Logout Complete'
 
 }
 
@@ -22,8 +26,40 @@ export class Logout implements Action {
 
 
 
+  export class LoginSuccess implements Action {
+    readonly type = CredentialsActionTypes.LoginSuccess;
+  
+    constructor(public payload: { user: UserModel }) {}
+  }
+
+
+  export class LoginFailure implements Action {
+    readonly type = CredentialsActionTypes.LoginFailure;
+  
+    constructor(public payload: any) {}
+  }
+  
+
+  export class LogoutCancelled implements Action {
+    readonly type = CredentialsActionTypes.LogoutCancelled;
+  }
+  
+
+export class LogoutConfirmed implements Action {
+  readonly type = CredentialsActionTypes.LogoutConfirmed;
+}
+
+  export class LogoutComplete implements Action {
+    readonly type = CredentialsActionTypes.LogoutComplete;
+  }
+  
 export type CredentialsActions =
 | Login
-| Logout;
+| LoginSuccess
+| Logout
+| LoginFailure
+| LogoutCancelled
+| LogoutConfirmed
+| LogoutComplete;
 
   
