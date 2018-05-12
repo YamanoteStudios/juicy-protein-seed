@@ -30,13 +30,10 @@ export const selectAuthenticationState =
   );
 
   // Select Login Page State = 
-  export const selectLoginViewState =
-  createSelector(<fromLoginView.State>('loginPage'),
-    fromAuthentication.selectUser,
-  );
-
+  export const selectLoginViewState = createFeatureSelector<fromLoginView.State>('loginPage');
+ 
   // SelectIsLoggedIn User State
-export const SelectIsLoggedIn = createSelector(selectAuthenticatedUser, user => !!user);
+export const selectIsLoggedIn = createSelector(selectAuthenticatedUser, user => !!user);
 
 // export const metaReducers: MetaReducer<State>[] = !environment.production
 // ? []
