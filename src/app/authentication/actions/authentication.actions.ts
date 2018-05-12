@@ -4,7 +4,9 @@ import { UserModel } from '../models/user.model';
 
 export enum CredentialsActionTypes {
   Login = '[Login Page] Login',
-  Logout = '[Auth] Confirm Logout',
+  LoginSuccess = '[Auth API] Login Success',
+  Logout = '[Authentication] Confirm Logout',
+
 }
 
 export class Login implements Action {

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import * as fromStore from 'src/app/state';
+import * as fromStore from 'src/app/state/';
 import { Logout } from 'src/app/authentication/actions/authentication.actions';
 
 
@@ -29,6 +29,9 @@ import { Logout } from 'src/app/authentication/actions/authentication.actions';
   ] 
 })
 export class AppComponent {
+  // Create a Loggged In Action from Store.
+  loggedIn$ = this.store.select(fromStore.selectIsLoggedIn);
+
 
   constructor(private store: Store<fromStore.State>) {}
 
