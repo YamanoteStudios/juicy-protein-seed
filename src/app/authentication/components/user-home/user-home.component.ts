@@ -2,6 +2,9 @@ import { Component} from '@angular/core';
 import { Store } from '@ngrx/store';
 import * as fromStore from 'src/app/state';
 
+// Grab the Logout Actions
+import { Logout } from '../../actions/authentication.actions';
+
 
 @Component({
   selector: 'newsn-user-home',
@@ -14,7 +17,9 @@ export class UserHomeComponent {
 
     logout(){
       // create a dispatch  fromstore to logOut.
-      console.log(' Logout function called !!')
+      // console.log(' Logout function called !!')
+      this.store.dispatch(new Logout());
+      console.log(new Logout());
     }
 
 }

@@ -1,2 +1,5 @@
-<newsn-login-form></newsn-login-form>
-   
+<newsn-login-form
+[error]="error$ | async"
+[disabled]="pending$ | async"
+(submitted)="onLogin($event)"
+></newsn-login-form>

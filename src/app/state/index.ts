@@ -11,17 +11,19 @@ import {
 
 
   export interface State {
-    auth: fromAuthentication.State;
+    authenticationState: fromAuthentication.State;
+    loginView: fromLoginView.State;
   };
 
 
   export const reducers: ActionReducerMap<State> = {
-  auth: fromAuthentication.reducer,
+    authenticationState: fromAuthentication.reducer,
+    loginView: fromLoginView.reducer,
   };
 
   // Create Feature Selector State ....
 export const selectAuthenticationState = 
-    createFeatureSelector<fromAuthentication.State>('auth');
+    createFeatureSelector<fromAuthentication.State>('authenticationState');
 
   // Create a Selector for Authenticating User...
   export const selectAuthenticatedUser =
@@ -30,11 +32,22 @@ export const selectAuthenticationState =
   );
 
   // Select Login Page State = 
-  export const selectLoginViewState = createFeatureSelector<fromLoginView.State>('loginPage');
+  export const selectLoginViewState = createFeatureSelector<fromLoginView.State>('loginView');
  
   // SelectIsLoggedIn User State
 export const selectIsLoggedIn = createSelector(selectAuthenticatedUser, user => !!user);
 
+export const selectLoginViewPending = createSelector(
+  selectLoginViewState,
+  fromLoginView.selectPending,
+);
+export const selectLoginViewError = createSelector(
+  selectLoginViewState,
+  fromLoginView.selectError,
+);
+
+
 // export const metaReducers: MetaReducer<State>[] = !environment.production
 // ? []
 // : [];
+
