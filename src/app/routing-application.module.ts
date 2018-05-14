@@ -5,14 +5,14 @@ import { AuthenticationService } from './authentication/services/authentication.
 
 const ROUTES = [
    // Add a route here
-    { path: '', pathMatch: 'full', redirectTo: '/home' }
+    { path: '', pathMatch: 'full', redirectTo: 'home' }
 ]
 
 
 @NgModule({
   imports: [
     RouterModule.forRoot([
-        ...ROUTES
+      { path: '', pathMatch: 'full', redirectTo: '/home' }
     ]),
   ],
   exports: [
