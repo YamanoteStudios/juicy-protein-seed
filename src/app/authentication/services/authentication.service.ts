@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { UserModel } from '../authentication/models/user.model';
+import { UserModel } from '../models/user.model';
 import { Observable, of, throwError } from 'rxjs';
-import { Credentials } from '../authentication/models/credentials.model';
+import { Credentials } from '../models/credentials.model';
 
 const bogusUser = { name: 'Chris', email: 'chris@kayode.me' }
 
@@ -12,7 +12,7 @@ export class AuthenticationService {
   private loggedIn = false;
 
   login(verify: Credentials): Observable<UserModel> {
-    if (verify.username !== 'ngconf') {
+    if (verify.username !== 'likewhoa') {
       return throwError('Infatuous credentials !!');
     }
 

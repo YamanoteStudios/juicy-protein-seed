@@ -14,6 +14,9 @@ import { RouteAuthenticationModule } from './route-authentication.module';
 import { LoginViewComponent } from './components/login-view/login-view.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { UserHomeComponent } from './components/user-home/user-home.component';
+import { LogoutPromptComponent } from './components/logout-prompt/logout-prompt.component';
+
+import { AuthenticationService } from './services/authentication.service';
 
 
 
@@ -31,7 +34,9 @@ import { UserHomeComponent } from './components/user-home/user-home.component';
     declarations: [
       LoginViewComponent,
       LoginFormComponent,
-      UserHomeComponent
+      LogoutPromptComponent,
+      UserHomeComponent,
+      AuthenticationService
     ],
     entryComponents: [AppComponent],
   })
