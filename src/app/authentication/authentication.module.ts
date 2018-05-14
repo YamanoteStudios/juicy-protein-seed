@@ -16,8 +16,6 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { UserHomeComponent } from './components/user-home/user-home.component';
 import { LogoutPromptComponent } from './components/logout-prompt/logout-prompt.component';
 
-import { AuthenticationService } from './services/authentication.service';
-
 
 
 @NgModule({
@@ -36,7 +34,7 @@ import { AuthenticationService } from './services/authentication.service';
       LoginFormComponent,
       LogoutPromptComponent,
       UserHomeComponent,
-      AuthenticationService
+      
     ],
     entryComponents: [AppComponent],
   })

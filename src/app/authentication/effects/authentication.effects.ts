@@ -34,7 +34,7 @@ export class AuthenticationEffects {
     .pipe(
       map(action => action.payload),
       exhaustMap(auth =>
-        this.authService
+        this.authenticationService
           .login(auth)
           .pipe(
             map(user => new LoginSuccess({ user })),
@@ -73,7 +73,7 @@ export class AuthenticationEffects {
     .ofType<LogoutConfirmed>(CredentialsActionTypes.LogoutConfirmed)
     .pipe(
       exhaustMap(auth =>
-        this.authService
+        this.authenticationService
           .logout()
           .pipe(
             tap(() => this.router.navigate(['/login'])),
@@ -85,7 +85,7 @@ export class AuthenticationEffects {
 
   constructor(
     private actions$: Actions,
-    private authService: AuthenticationService,
+    private authenticationService: AuthenticationService,
     private router: Router,
     private dialogService: MatDialog,
   ) {}
