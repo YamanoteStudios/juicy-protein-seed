@@ -16,11 +16,16 @@ import { EffectsModule } from '@ngrx/effects';
 import { reducers } from 'src/app/state';
 
 // import as CONST es6 style
-// const NGRX_MODULES =  [
-//   StoreModule,
-//   StoreDevtoolsModule,
-//   EffectsModule
-// ];
+const NGRX_MODULES =  [
+  StoreDevtoolsModule,
+  EffectsModule,
+  BrowserModule,
+  BrowserAnimationsModule,
+  HttpClientModule,
+  MatSidenavModule,
+  MatToolbarModule,
+  MatIconModule,
+];
 
 const MATERIAL_MODULES = [
   MatSidenavModule,
@@ -37,16 +42,11 @@ const AUTHENTICATION_MODULES = [
 @NgModule({
   declarations: [
     AppComponent,
-
   ],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
+    ...MATERIAL_MODULES,
     ...AUTHENTICATION_MODULES,
-     MatSidenavModule,
-    MatToolbarModule,
-    MatIconModule,
+    ...NGRX_MODULES,
     StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument({
       name: 'Flash News Network',
