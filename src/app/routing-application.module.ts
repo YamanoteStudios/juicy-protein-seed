@@ -1,19 +1,16 @@
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { AuthenticationService } from './authentication/services/authentication.service';
 
 
-const ROUTES = [
-   // Add a route here
-    { path: '', pathMatch: 'full', redirectTo: 'home' }
+const applicationRoutes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'login' }
 ]
 
 
 @NgModule({
   imports: [
-    RouterModule.forRoot([
-      { path: '', pathMatch: 'full', redirectTo: '/home' }
-    ]),
+    RouterModule.forRoot(applicationRoutes),
   ],
   exports: [
     RouterModule
