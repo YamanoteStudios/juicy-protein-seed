@@ -18,7 +18,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { UserHomeComponent } from './components/user-home/user-home.component';
 import { LogoutPromptComponent } from './components/logout-prompt/logout-prompt.component';
 import { AuthenticationEffects } from '../authentication/effects/authentication.effects';
-
+import { IcosComponent } from './components/icos/icos.component';
 
 const NATIVE_COMPONENTS = [];
 const NATIVE_MODULES = [
@@ -42,6 +42,7 @@ const CUSTOM_COMPONENTS = [
   UserHomeComponent,
   LogoutPromptComponent,
   LoginFormComponent,
+  IcosComponent,
 ]
 
 
@@ -53,6 +54,7 @@ const CUSTOM_COMPONENTS = [
       MatDialogModule,
       MatInputModule,
       ReactiveFormsModule,
+      RouteAuthenticationModule,      
       EffectsModule.forFeature([AuthenticationEffects]),
     
     ],

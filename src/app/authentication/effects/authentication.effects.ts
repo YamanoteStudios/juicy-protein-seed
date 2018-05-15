@@ -20,9 +20,8 @@ import {
   LogoutCancelled,
 } from '../actions/authentication.actions';
 import { AuthenticationService } from '../services/authentication.service';
-import { LogoutPromptComponent } from '../components/logout-prompt/logout-prompt.component';
-import { createNgModule } from '@angular/compiler/src/core';
 
+import {LogoutPromptComponent} from '../components/logout-prompt/logout-prompt.component';
 
 
 @Injectable()
@@ -33,9 +32,9 @@ export class AuthenticationEffects {
     .ofType<Login>(CredentialsActionTypes.Login)
     .pipe(
       map(action => action.payload),
-      exhaustMap(auth =>
+      exhaustMap(authenticated =>
         this.authenticationService
-          .login(auth)
+          .login(authenticated)
           .pipe(
             map(user => new LoginSuccess({ user })),
             catchError(error => of(new LoginFailure(error))),
@@ -44,9 +43,9 @@ export class AuthenticationEffects {
     );
 
   @Effect({ dispatch: false })
-//   loginRedirect$ = this.actions$
-//     .ofType<LoginSuccess>(CredentialsActionTypes.LoginSuccess)
-//     .pipe(tap(() => this.router.navigate(['/books'])));
+  loginRedirect$ = this.actions$
+    .ofType<LoginSuccess>(CredentialsActionTypes.LoginSuccess)
+    .pipe(tap(() => this.router.navigate(['/home'])));
 
   @Effect()
   logoutConfirmation$ = this.actions$

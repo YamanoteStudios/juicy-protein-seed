@@ -12,6 +12,8 @@ import {
   AuthenticationGuardService
 } from './services/authentication-guard.service';
 
+
+
 @NgModule({
   imports: [
     RouterModule.forChild([
@@ -20,10 +22,8 @@ import {
         path: 'home',
         component: UserHomeComponent,
         canActivate: [AuthenticationGuardService],
-      }
-
+      },
     ]),
   ],
-  providers: [AuthenticationGuardService]
 })
 export class RouteAuthenticationModule { }
