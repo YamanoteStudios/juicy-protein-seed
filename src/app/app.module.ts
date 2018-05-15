@@ -1,41 +1,49 @@
+// Native Angular Modules ....
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import { environment } from '../environments/environment';
 
 
-/** For Authentication Module */
-import { MatSidenavModule, MatToolbarModule, MatIconModule } from '@angular/material';
+// Angular Redux
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { EffectsModule } from '@ngrx/effects';
+
+// From Google Material Theme 
+import { MatSidenavModule, MatToolbarModule, MatIconModule } from '@angular/material';
+
+/** For Authentication Module */
 import { RoutingApplicationModule } from './routing-application.module';
 import { AuthenticationModule } from './authentication/authentication.module';
-import { EffectsModule } from '@ngrx/effects';
 import { reducers } from 'src/app/state';
 
-// import as CONST es6 style
+// Other Application-Specific Modules
+import { AppComponent } from './app.component';
+import { environment } from '../environments/environment';
+
+const ANGULAR_MODULES = [
+  HttpClientModule,
+  BrowserAnimationsModule,
+  BrowserModule,
+]
+
+
+// Angular Redux ....
 const NGRX_MODULES =  [
   StoreDevtoolsModule,
   EffectsModule,
-  BrowserModule,
-  BrowserAnimationsModule,
-  HttpClientModule,
-  MatSidenavModule,
-  MatToolbarModule,
-  MatIconModule,
 ];
-
+// Angular Material ...
 const MATERIAL_MODULES = [
   MatSidenavModule,
   MatToolbarModule,
   MatIconModule
 ];
-
+// Custom Modules ...
 const AUTHENTICATION_MODULES = [
   RoutingApplicationModule,
-  AuthenticationModule,
+  AuthenticationModule
 ];
 
 
@@ -47,6 +55,7 @@ const AUTHENTICATION_MODULES = [
     ...MATERIAL_MODULES,
     ...AUTHENTICATION_MODULES,
     ...NGRX_MODULES,
+    ...ANGULAR_MODULES,
     StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument({
       name: 'Flash News Network',
