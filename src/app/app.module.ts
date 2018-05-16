@@ -16,7 +16,7 @@ import { MatSidenavModule, MatToolbarModule, MatIconModule } from '@angular/mate
 /** For Authentication Module */
 import { RoutingApplicationModule } from './routing-application.module';
 import { AuthenticationModule } from './authentication/authentication.module';
-import { reducers } from 'src/app/state';
+import { reducers, metaReducers } from 'src/app/state';
 
 // Other Application-Specific Modules
 import { AppComponent } from './app.component';
@@ -33,6 +33,7 @@ const ANGULAR_MODULES = [
 const NGRX_MODULES =  [
   StoreDevtoolsModule,
   EffectsModule,
+  metaReducers
 ];
 // Angular Material ...
 const MATERIAL_MODULES = [
