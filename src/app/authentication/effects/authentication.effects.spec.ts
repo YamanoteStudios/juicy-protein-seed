@@ -1,5 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { provideMockActions } from '@ngrx/effects/testing';
+import {  EffectsMetadata, getEffectsMetadata} from '@ngrx/effects';
 import { HttpClient } from '@angular/common/http';
 import { cold } from 'jasmine-marbles';
 import { AuthenticationEffects } from './authentication.effects';
@@ -17,6 +18,9 @@ describe('Authentication Effects', () => {
     let actions$: Observable<any>;
     let router: Mock<Router>;
     let dialogService: Mock<MatDialog>; 
+    let metadata: EffectsMetadata<AuthenticationEffects>;
+
+
     beforeEach(() => {
         TestBed.configureTestingModule({
           providers: [
@@ -32,8 +36,15 @@ describe('Authentication Effects', () => {
     authenticationService = TestBed.get(AuthenticationService);
     dialogService = TestBed.get(MatDialog);
     router = TestBed.get(Router);
+       
+    // Return decorator configurations for all effects in a class instance.
+    metadata = getEffectsMetadata(effects);
+
     });
 
+    it('should be defined. ' , () => {
+      expect(metadata).toBeDefined();
+    });
 
 
 })

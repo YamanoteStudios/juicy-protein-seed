@@ -17,7 +17,7 @@ import { MatSidenavModule, MatToolbarModule, MatIconModule } from '@angular/mate
 import { RoutingApplicationModule } from './routing-application.module';
 import { AuthenticationModule } from './authentication/authentication.module';
 import { reducers, metaReducers } from 'src/app/state';
-
+  
 // Other Application-Specific Modules
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
