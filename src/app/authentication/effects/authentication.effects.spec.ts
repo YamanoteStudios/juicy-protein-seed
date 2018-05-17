@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { provideMockActions } from '@ngrx/effects/testing';
-import {  EffectsMetadata, getEffectsMetadata} from '@ngrx/effects';
+import {  EffectsMetadata, getEffectsMetadata } from '@ngrx/effects';
 import { HttpClient } from '@angular/common/http';
 import { cold } from 'jasmine-marbles';
 import { AuthenticationEffects } from './authentication.effects';
@@ -42,7 +42,7 @@ describe('Authentication Effects', () => {
 
     });
 
-    it('should be defined. ' , () => {
+  it('should be defined. ' , () => {
       expect(metadata).toBeDefined();
     });
 
