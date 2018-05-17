@@ -8,17 +8,19 @@ import {
   import { environment } from '../../environments/environment';
   import * as fromAuthentication from './authentication.reducer';
   import * as fromLoginView from './login-view.reducer';
-
+  // TODO: import * as fromMember from './member.reducer';
 
   export interface State {
     authenticationState: fromAuthentication.State;
     loginView: fromLoginView.State;
+    // TODO: memberForm: fromMember.State;
   };
 
-
+  // TODO: add     memberForm: fromMember.memberGroupValidation,
   export const reducers: ActionReducerMap<State> = {
     authenticationState: fromAuthentication.reducer,
     loginView: fromLoginView.reducer,
+
   };
 
   // Create Feature Selector State ....

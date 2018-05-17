@@ -201,25 +201,25 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-"@ngrx/effects@6.0.0":
-  version "6.0.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-6.0.0-beta.3.tgz#29e70a2fee0e793e9c08cbc7657232c043f9410b"
+"@ngrx/effects@6.0.0-beta.1":
+  version "6.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-6.0.0-beta.1.tgz#34e742e8c6a5730291f1e1f35798173ac0a93733"
 
-"@ngrx/entity@6.0.0":
-  version "6.0.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@ngrx/entity/-/entity-6.0.0-beta.3.tgz#cada859a70eb6291f29fb51cd2c74508f90f3213"
+"@ngrx/entity@6.0.0-beta.1":
+  version "6.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/entity/-/entity-6.0.0-beta.1.tgz#fd399d2fea12c2f199cd3e78dd6a714237af594d"
 
 "@ngrx/schematics@github:ngrx/schematics-builds":
   version "6.0.0-beta.3"
   resolved "https://codeload.github.com/ngrx/schematics-builds/tar.gz/9f85af11e703f576a6b204282115bfeeb31bd2d1"
 
-"@ngrx/store-devtools@6.0.0":
-  version "6.0.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-6.0.0-beta.3.tgz#899836165b6554c0f981054610293f6d0958d4de"
+"@ngrx/store-devtools@6.0.0-beta.1":
+  version "6.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-6.0.0-beta.1.tgz#8bbac342c90340589c881577e193dbe67c487c5a"
 
-"@ngrx/store@6.0.0":
-  version "6.0.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-6.0.0-beta.3.tgz#584e0bb69c2ea75637a2c2adfb27fc08db98dc92"
+"@ngrx/store@6.0.0-beta.1":
+  version "6.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-6.0.0-beta.1.tgz#db4b91fb54828b83495ae9cfb544cf62266a441d"
 
 "@ngtools/webpack@6.0.3":
   version "6.0.3"
@@ -4721,6 +4721,10 @@ neo-async@^2.5.0:
 next-tick@1:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
+
+ngrx-forms@^2.3.5:
+  version "2.3.5"
+  resolved "https://registry.yarnpkg.com/ngrx-forms/-/ngrx-forms-2.3.5.tgz#cfcdf6025e6553d2fa1308703c6d979d758f4713"
 
 ngrx@^2.0.1:
   version "2.0.1"

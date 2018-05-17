@@ -10,6 +10,7 @@ import {
 } from '@angular/material';
 import { EffectsModule } from '@ngrx/effects';
 
+import { NgrxFormsModule } from 'ngrx-forms';
 
 // Custom Modules & Components 
 import { RouteAuthenticationModule } from './route-authentication.module';
@@ -30,6 +31,7 @@ const NATIVE_MODULES = [
   MatCardModule,
   MatDialogModule,
   EffectsModule,
+  NgrxFormsModule,
 ];
 
 
