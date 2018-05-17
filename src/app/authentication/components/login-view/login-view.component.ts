@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import * as fromStore from 'src/app/state';
 
 // Grab the Logout Actions
-import { Login } from '../../actions/authentication.actions';
+import { Login } from 'src/app/authentication/actions/authentication.actions';
 
 //Grab Credentials Models 
 import {Credentials} from '../../models/credentials.model';

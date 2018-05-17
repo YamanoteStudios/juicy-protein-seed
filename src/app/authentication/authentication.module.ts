@@ -20,7 +20,7 @@ import { LogoutPromptComponent } from './components/logout-prompt/logout-prompt.
 import { AuthenticationEffects } from '../authentication/effects/authentication.effects';
 import { IcosComponent } from './components/icos/icos.component';
 
-const NATIVE_COMPONENTS = [];
+
 const NATIVE_MODULES = [
   NgModule,
   CommonModule,

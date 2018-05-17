@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login View Component should compile 1`] = `
+<newsn-login-view
+  error$={[Function BehaviorSubject]}
+  pending$={[Function BehaviorSubject]}
+  store={[Function Object]}
+>
+  <newsn-login-form
+    ng-reflect-disabled="false"
+    ng-reflect-error=""
+  >
+    <mat-card>
+      <mat-card-title>
+         Login 
+      </mat-card-title>
+      <mat-card-content>
+        <form>
+          <mat-form-field>
+            <input
+              formcontrolname="username"
+              matinput=""
+              placeholder="Username"
+              type="text"
+            />
+            
+            <mat-error>
+              Username is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              formcontrolname="password"
+              matinput=""
+              placeholder="Password"
+              type="password"
+            />
+            
+            <mat-error>
+              Password is required
+            </mat-error>
+          </mat-form-field>
+          
+          <div
+            class="loginButtons"
+          >
+            <button
+              mat-button=""
+              type="submit"
+            >
+              Login
+            </button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </newsn-login-form>
+</newsn-login-view>
+`;

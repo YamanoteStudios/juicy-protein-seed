@@ -8,12 +8,24 @@
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "newsn",
-      "schematics": {},
+      "schematics": {
+    "@ngrx/schematics:component": {
+      "inlineStyle": true,
+      "inlineTemplate": true,
+      "flat": false,
+      "spec": false,
+      "prefix": "app",
+      "styleext": "scss"
+    },
+    "@ngrx/schematics:directive": {
+      "prefix": "app"
+    }
+  },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/newsn-local",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
