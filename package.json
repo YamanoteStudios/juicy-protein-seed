@@ -24,10 +24,10 @@
     "@angular/platform-browser": "^6.0.0",
     "@angular/platform-browser-dynamic": "^6.0.0",
     "@angular/router": "^6.0.0",
-    "@ngrx/effects": "6.0.0-beta.1",
-    "@ngrx/entity": "6.0.0-beta.1",
-    "@ngrx/store": "6.0.0-beta.1",
-    "@ngrx/store-devtools": "6.0.0-beta.1",
+    "@ngrx/effects": "6.0.0",
+    "@ngrx/entity": "6.0.0",
+    "@ngrx/store": "6.0.0",
+    "@ngrx/store-devtools": "6.0.0",
     "core-js": "^2.5.4",
     "ngrx": "^2.0.1",
     "rxjs": "^6.0.0",
@@ -65,8 +65,8 @@
     "preset": "jest-preset-angular",
     "setupTestFrameworkScriptFile": "<rootDir>/src/setupJest.ts",
     "moduleNameMapper": {
-      "^@app/state(.*)$": "<rootDir>/src/app/state/$1",
-      "^@app/(.*)$": "<rootDir>/src/app/$1"
+      "^app/state(.*)$": "<rootDir>/src/app/state/$1",
+      "^app/(.*)$": "<rootDir>/src/app/$1"
     }
   }
 }
